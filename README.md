@@ -6,6 +6,14 @@ This repository contains a MATLAB implementation of the **Narwhal Optimizer (NO)
 
 The NO algorithm is designed to solve global optimization problems and has been benchmarked on various functions, demonstrating its effectiveness in avoiding local minima and achieving global optimality.
 
+## Usage
+
+To use the Narwhal Optimizer in your own optimization problems, you can import the `NarwhalOptimizer` class from the `narwhal_optimizer.py` file. Below is an example of how to use the algorithm to optimize a benchmark function:
+
+```bash
+run main.m 
+```
+
 ## Citation
 
 If you use this implementation in your research, please cite the original paper:
