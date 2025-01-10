@@ -24,7 +24,6 @@ AverageBestFitness = mean(BestFitnessArray);
 AverageRunTime = mean(RunTimeArray);
 AverageConvergenceCurve = mean(ConvergenceCurves, 1);
 
-%% Display the results
 display(['Average running time over 30 runs: ', num2str(AverageRunTime)]);
 display(['Average best fitness over 30 runs: ', num2str(AverageBestFitness)]);
 
