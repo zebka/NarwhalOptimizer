@@ -8,7 +8,7 @@ The NO algorithm is designed to solve global optimization problems and has been 
 
 ## Usage
 
-To use the Narwhal Optimizer in your own optimization problems, you can import the `NarwhalOptimizer` class from the `narwhal_optimizer.py` file. Below is an example of how to use the algorithm to optimize a benchmark function:
+To use the Narwhal Optimizer in your own optimization problems, you can clone this repo and run main.m file:
 
 ```bash
 run main.m 
