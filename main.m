@@ -2,7 +2,7 @@ clear
 close all
 clc
 
-Function_name = 'F1';  % choose the function to Optimize
+Function_name = 'F2';  % choose the function to Optimize
 
 
 [lb, ub, dim, fobj] = Get_Functions_details(Function_name); % return the Function ( one of 23 basic function)
@@ -29,8 +29,8 @@ display(['Average running time over 30 runs: ', num2str(AverageRunTime)]);
 display(['Average best fitness over 30 runs: ', num2str(AverageBestFitness)]);
 
 figure;
-semilogy(CNVG, 'Color', 'r', 'LineWidth', 1.25);
-title('Convergence curve');
+semilogy(1:T, AverageConvergenceCurve, 'color', 'r', 'linewidth', 2.5);
+title('Average Convergence Curve');
 xlabel('Iteration');
 ylabel('Best score obtained so far');
 
