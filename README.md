@@ -21,3 +21,14 @@ If you use this implementation in your research, please cite the original paper:
   year={2024},
   doi={10.34028/iajit/21/3/6}
 }
+
+## Contact
+
+For any questions or inquiries, please contact:
+
+- **Seyyid Ahmed Medjahed**: seyyidahmed.medjahed@univ-relizane.dz  
+- **Fatima Boukhatem**: fatima.boukhatem@univ-sba.dz
+
+---
+
+Thank you for using the Narwhal Optimizer! We hope this implementation helps you in solving complex optimization problems.
