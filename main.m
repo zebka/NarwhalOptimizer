@@ -2,7 +2,7 @@ clear
 close all
 clc
 
-Function_name = 'F2';  % choose the function to Optimize
+Function_name = 'F1';  % choose the function to Optimize
 
 
 [lb, ub, dim, fobj] = Get_Functions_details(Function_name); % return the Function ( one of 23 basic function)
