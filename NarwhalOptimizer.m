@@ -1,14 +1,15 @@
 function [best_solution, best_fitness, CNVG] = NarwhalOptimizer(N, T, lb, ub, dim, fobj)
     % Initialize population
-    X = lb + (ub - lb) * rand(N, dim);  % Random positions of narwhals
-    fitness = zeros(N, 1);              % Fitness values
+    X = lb + (ub - lb) * rand(N, dim);  
+    fitness = zeros(N, 1);              
     
-    % Evaluate initial fitness
     for i = 1:N
         fitness(i) = fobj(X(i, :));
     end
     
-    % Find the best solution
+    sigma0 = 2
+    alpha = 2
+
     [best_fitness, best_idx] = min(fitness);
     best_solution = X(best_idx, :);
     
@@ -16,10 +17,10 @@ function [best_solution, best_fitness, CNVG] = NarwhalOptimizer(N, T, lb, ub, di
     CNVG(1) = best_fitness;
     
     for t = 1:T
-        sigma = 1.65 * (1 - (t / T));
+        sigma = sigma0 * (1 - (t / T));
         
         for i = 1:N
-            SE = 0.1 / (1 + 2 * norm(X(i, :) - best_solution));
+            SE = 0.1 / (1 + alpha * norm(X(i, :) - best_solution));
             
             PR = exp(-norm(X(i, :) - best_solution)^2 / (2 * sigma^2));
             SP = SE * PR;
