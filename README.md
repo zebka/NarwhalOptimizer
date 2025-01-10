@@ -21,7 +21,7 @@ If you use this implementation in your research, please cite the original paper:
   year={2024},
   doi={10.34028/iajit/21/3/6}
 }
-
+```
 ## Contact
 
 For any questions or inquiries, please contact:
