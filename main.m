@@ -10,10 +10,23 @@ Function_name = 'F1';  % choose the function to Optimize
 
 T = 1000;  % Number of iteration
 N = 30; % Number of Narwals (agents) 
+NumRuns = 30;         % Number of runs for averaging
 
+for run = 1:NumRuns
+    tic;
+    [best_solution, best_fitness, CNVG] = NarwhalOptimizer(N, T, lb, ub, dim, fobj);
+    RunTimeArray(run) = toc;
+    BestFitnessArray(run) = best_fitness; 
+    ConvergenceCurves(run, :) = CNVG;
+end
 
-[best_solution, best_fitness, CNVG] = NarwhalOptimizer(N, T, lb, ub, dim, fobj);
+AverageBestFitness = mean(BestFitnessArray);
+AverageRunTime = mean(RunTimeArray);
+AverageConvergenceCurve = mean(ConvergenceCurves, 1);
 
+%% Display the results
+display(['Average running time over 30 runs: ', num2str(AverageRunTime)]);
+display(['Average best fitness over 30 runs: ', num2str(AverageBestFitness)]);
 
 figure;
 semilogy(CNVG, 'Color', 'r', 'LineWidth', 1.25);
