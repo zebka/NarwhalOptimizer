@@ -2,14 +2,14 @@ clear
 close all
 clc
 
-Function_name = 'F15';  
+Function_name = 'F1';  % choose the function to Optimize
 
 
-[lb, ub, dim, fobj] = Get_Functions_details(Function_name);
+[lb, ub, dim, fobj] = Get_Functions_details(Function_name); % return the Function ( one of 23 basic function)
 
 
-T = 1000;  
-N = 30;  
+T = 1000;  % Number of iteration
+N = 30; % Number of Narwals (agents) 
 
 
 [best_solution, best_fitness, CNVG] = NarwhalOptimizer(N, T, lb, ub, dim, fobj);
