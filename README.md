@@ -11,7 +11,7 @@ The NO algorithm is designed to solve global optimization problems and has been 
 To use the Narwhal Optimizer in your own optimization problems, you can clone this repo and run main.m file:
 
 ```bash
-run main.m 
+run main.m
 ```
 
 ## Citation
