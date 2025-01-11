@@ -1,142 +1,142 @@
 function [lb,ub,dim,fobj] = GetFunctionsdetails(F,n1)
-switch F
-    case 'F1'
-        fobj = @F1;
-        lb=-100;
-        ub=100;
-        dim=n1;
-        
-    case 'F2'
-        fobj = @F2;
-        lb=-10;
-        ub=10;
-        dim=n1;
-        
-    case 'F3'
-        fobj = @F3;
-        lb=-100;
-        ub=100;
-        dim=n1;
-        
-    case 'F4'
-        fobj = @F4;
-        lb=-100;
-        ub=100;
-        dim=n1;
-        
-    case 'F5'
-        fobj = @F5;
-        lb=-30;
-        ub=30;
-        dim=n1;
-        
-    case 'F6'
-        fobj = @F6;
-        lb=-100;
-        ub=100;
-        dim=n1;
-        
-    case 'F7'
-        fobj = @F7;
-        lb=-1.28;
-        ub=1.28;
-        dim=n1;
-        
-    case 'F8'
-        fobj = @F8;
-        lb=-500;
-        ub=500;
-        dim=n1;
-        
-    case 'F9'
-        fobj = @F9;
-        lb=-5.12;
-        ub=5.12;
-        dim=n1;
-        
-    case 'F10'
-        fobj = @F10;
-        lb=-32;
-        ub=32;
-        dim=n1;
-    case 'F11'
-        fobj = @F11;
-        lb=-600;
-        ub=600;
-        dim=n1;
-        
-    case 'F12'
-        fobj = @F12;
-        lb=-50;
-        ub=50;
-        dim=n1;
-        
-    case 'F13'
-        fobj = @F13;
-        lb=-50;
-        ub=50;
-        dim=n1;
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    case 'F14'
-        fobj = @F14;
-        lb=-65.536;
-        ub=65.536;
-        dim=2;
-        
-    case 'F15'
-        fobj = @F15;
-        lb=-5;
-        ub=5;
-        dim=4;
-        
-    case 'F16'
-        fobj = @F16;
-        lb=-5;
-        ub=5;
-        dim=2;
-        
-    case 'F17'
-        fobj = @F17;
-        lb=[-5,0];
-        ub=[10,15];
-        dim=2;
-        
-    case 'F18'
-        fobj = @F18;
-        lb=-5;
-        ub=5;
-        dim=2;
-        
-    case 'F19'
-        fobj = @F19;
-        lb=0;
-        ub=1;
-        dim=3;
-        
-    case 'F20'
-        fobj = @F20;
-        lb=0;
-        ub=1;
-        dim=6;     
-        
-    case 'F21'
-        fobj = @F21;
-        lb=0;
-        ub=10;
-        dim=4;    
-%         dim=4;
-    case 'F22'
-        fobj = @F22;
-        lb=0;
-        ub=10;
-        dim=4;    
-        
-    case 'F23'
-        fobj = @F23;
-        lb=0;
-        ub=10;
-        dim=4;            
-end
+    switch F
+        case 'F1'
+            fobj = @F1;
+            lb=-100;
+            ub=100;
+            dim=n1;
+            
+        case 'F2'
+            fobj = @F2;
+            lb=-10;
+            ub=10;
+            dim=n1;
+            
+        case 'F3'
+            fobj = @F3;
+            lb=-100;
+            ub=100;
+            dim=n1;
+            
+        case 'F4'
+            fobj = @F4;
+            lb=-100;
+            ub=100;
+            dim=n1;
+            
+        case 'F5'
+            fobj = @F5;
+            lb=-30;
+            ub=30;
+            dim=n1;
+            
+        case 'F6'
+            fobj = @F6;
+            lb=-100;
+            ub=100;
+            dim=n1;
+            
+        case 'F7'
+            fobj = @F7;
+            lb=-1.28;
+            ub=1.28;
+            dim=n1;
+            
+        case 'F8'
+            fobj = @F8;
+            lb=-500;
+            ub=500;
+            dim=n1;
+            
+        case 'F9'
+            fobj = @F9;
+            lb=-5.12;
+            ub=5.12;
+            dim=n1;
+            
+        case 'F10'
+            fobj = @F10;
+            lb=-32;
+            ub=32;
+            dim=n1;
+        case 'F11'
+            fobj = @F11;
+            lb=-600;
+            ub=600;
+            dim=n1;
+            
+        case 'F12'
+            fobj = @F12;
+            lb=-50;
+            ub=50;
+            dim=n1;
+            
+        case 'F13'
+            fobj = @F13;
+            lb=-50;
+            ub=50;
+            dim=n1;
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        case 'F14'
+            fobj = @F14;
+            lb=-65.536;
+            ub=65.536;
+            dim=2;
+            
+        case 'F15'
+            fobj = @F15;
+            lb=-5;
+            ub=5;
+            dim=4;
+            
+        case 'F16'
+            fobj = @F16;
+            lb=-5;
+            ub=5;
+            dim=2;
+            
+        case 'F17'
+            fobj = @F17;
+            lb=[-5,0];
+            ub=[10,15];
+            dim=2;
+            
+        case 'F18'
+            fobj = @F18;
+            lb=-5;
+            ub=5;
+            dim=2;
+            
+        case 'F19'
+            fobj = @F19;
+            lb=0;
+            ub=1;
+            dim=3;
+            
+        case 'F20'
+            fobj = @F20;
+            lb=0;
+            ub=1;
+            dim=6;     
+            
+        case 'F21'
+            fobj = @F21;
+            lb=0;
+            ub=10;
+            dim=4;    
+    %         dim=4;
+        case 'F22'
+            fobj = @F22;
+            lb=0;
+            ub=10;
+            dim=4;    
+            
+        case 'F23'
+            fobj = @F23;
+            lb=0;
+            ub=10;
+            dim=4;            
+    end
 end
 % F1
 function o = F1(x)
