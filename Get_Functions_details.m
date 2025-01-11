@@ -1,18 +1,3 @@
-%_______________________________________________________________________________________________
-%  Puma Optimizar Algorithm (POA)  
-%
-%  Source codes demo version 1.0                                                                      
-%                                                                                                     
-%  Developed in MATLAB R2011b(R2021a)                                                                   
-%  Main Paper: { Cluster Computing
-%  Authors: Benyamin Abdollahzadeh, Nima Khodadadi, Saeid Barshandeh, Pavel Trojovský ,Farhad Soleimanian Gharehchopogh, El-Sayed M. El-kenawy, Laith Abualigah, Seyedali Mirjalili
-%  Puma optimizer (PO): a novel metaheuristic optimization algorithm and its application in machine learning
-%  DOI: 10.1007/s10586-023-04221-5 }                                                                                                                                                            
-%                                                                                                     
-%  e-Mail: benyamin.abdolahzade@gmail.com  
-%_______________________________________________________________________________________________
-
-
 function [lb,ub,dim,fobj] = Get_Functions_details(F)
 n1=30; % Maximum number of dimension
 switch F
