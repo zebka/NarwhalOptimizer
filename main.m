@@ -6,20 +6,11 @@ close all
 D = 30;               
 N = 30;               
 Max = 1000;           
-FunctionName = 'F15';  
+FunctionName = 'F18';  
 NumRuns = 30;         
 
 %% Get function details
 [lb, ub, dim, fun] = GetFunctionsdetails(FunctionName, D);
-
-
-%% if isscalar(lb)
-%    lb = lb * ones(1, D);  
-%end
-%if isscalar(ub)
-%    ub = ub * ones(1, D);  
-%end 
-%
 
 %% Arrays to store results from each run
 BestFitnessArray = zeros(1, NumRuns);
@@ -34,6 +25,13 @@ for run = 1:NumRuns
     BestFitnessArray(run) = Bestfitness(1); 
     ConvergenceCurves(run, :) = Convergencecurve;
 end
+
+if isscalar(lb)
+    lb = lb * ones(1, D);  
+end
+if isscalar(ub)
+    ub = ub * ones(1, D);  
+end 
 
 %% Calculate averages
 AverageBestFitness = mean(BestFitnessArray);
