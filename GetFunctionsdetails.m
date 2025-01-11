@@ -1,131 +1,131 @@
 function [lb,ub,dim,fobj] = GetFunctionsdetails(F,n1)
     switch F
-        case 'F1'
+        case 'BF1'
             fobj = @F1;
             lb=-100;
             ub=100;
             dim=n1;
             
-        case 'F2'
+        case 'BF2'
             fobj = @F2;
             lb=-10;
             ub=10;
             dim=n1;
             
-        case 'F3'
+        case 'BF3'
             fobj = @F3;
             lb=-100;
             ub=100;
             dim=n1;
             
-        case 'F4'
+        case 'BF4'
             fobj = @F4;
             lb=-100;
             ub=100;
             dim=n1;
             
-        case 'F5'
+        case 'BF5'
             fobj = @F5;
             lb=-30;
             ub=30;
             dim=n1;
             
-        case 'F6'
+        case 'BF6'
             fobj = @F6;
             lb=-100;
             ub=100;
             dim=n1;
             
-        case 'F7'
+        case 'BF7'
             fobj = @F7;
             lb=-1.28;
             ub=1.28;
             dim=n1;
             
-        case 'F8'
+        case 'BF8'
             fobj = @F8;
             lb=-500;
             ub=500;
             dim=n1;
             
-        case 'F9'
+        case 'BF9'
             fobj = @F9;
             lb=-5.12;
             ub=5.12;
             dim=n1;
             
-        case 'F10'
+        case 'BF10'
             fobj = @F10;
             lb=-32;
             ub=32;
             dim=n1;
-        case 'F11'
+        case 'BF11'
             fobj = @F11;
             lb=-600;
             ub=600;
             dim=n1;
             
-        case 'F12'
+        case 'BF12'
             fobj = @F12;
             lb=-50;
             ub=50;
             dim=n1;
             
-        case 'F13'
+        case 'BF13'
             fobj = @F13;
             lb=-50;
             ub=50;
             dim=n1;
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        case 'F14'
+
+        case 'BF14'
             fobj = @F14;
             lb=-65.536;
             ub=65.536;
             dim=2;
             
-        case 'F15'
+        case 'BF15'
             fobj = @F15;
             lb=-5;
             ub=5;
             dim=4;
             
-        case 'F16'
+        case 'BF16'
             fobj = @F16;
             lb=-5;
             ub=5;
             dim=2;
             
-        case 'F17'
+        case 'BF17'
             fobj = @F17;
             lb=[-5,0];
             ub=[10,15];
             dim=2;
             
-        case 'F18'
+        case 'BF18'
             fobj = @F18;
             lb=-5;
             ub=5;
             dim=2;
             
-        case 'F19'
+        case 'BF19'
             fobj = @F19;
             lb=0;
             ub=1;
             dim=3;
             
-        case 'F20'
+        case 'BF20'
             fobj = @F20;
             lb=0;
             ub=1;
             dim=6;     
             
-        case 'F21'
+        case 'BF21'
             fobj = @F21;
             lb=0;
             ub=10;
             dim=4;    
-    %         dim=4;
-        case 'F22'
+
+        case 'BF22'
             fobj = @F22;
             lb=0;
             ub=10;
@@ -135,7 +135,216 @@ function [lb,ub,dim,fobj] = GetFunctionsdetails(F,n1)
             fobj = @F23;
             lb=0;
             ub=10;
-            dim=4;            
+            dim=4;
+        %CEC2017 - 1 
+        case 'CF1'
+            fobj = @F1;
+            lb=-100;
+            ub=100;
+            dim=D;
+            
+        %CEC2017 - 2
+        case 'CF2'
+            fobj = @F2;
+            lb=-100;
+            ub=100;
+            dim=D;
+            
+        %CEC2017 - 3
+        case 'CF3'
+            fobj = @F3;
+            lb=-100;
+            ub=100;
+            dim=D;
+            
+        %CEC2017 - 4
+        case 'CF4'
+            fobj = @F4;
+            lb=-100;
+            ub=100;
+            dim=D;
+            
+        %CEC2017 - 5
+        case 'CF5'
+            fobj = @F5;
+            lb=-100;
+            ub=100;
+            dim=D;
+            
+        %CEC2017 - 6
+        case 'CF6'
+            fobj = @F6;
+            lb=-100;
+            ub=100;
+            dim=D;
+            
+        %CEC2017 - 7
+        case 'CF7'
+            fobj = @F7;
+            lb=-100;
+            ub=100;
+            dim=D;
+            
+        %CEC2017 - 8
+        case 'CF8'
+            fobj = @F8;
+            lb=-100;
+            ub=100;
+            dim=D;
+            
+        %CEC2017 - 9
+        case 'CF9'
+            fobj = @F9;
+            lb=-100;
+            ub=100;
+            dim=D;
+            
+        %CEC2017 - 10
+        case 'CF10'
+            fobj = @F10;
+            lb=-100;
+            ub=100;
+            dim=D;
+            
+        %CEC2017 - 11
+        case 'CF11'
+            fobj = @F11;
+            lb=-100;
+            ub=100;
+            dim=D;
+            
+        %CEC2017 - 12
+        case 'CF12'
+            fobj = @F12;
+            lb=-100;
+            ub=100;
+            dim=D;
+            
+        %CEC2017 - 13
+        case 'CF13'
+            fobj = @F13;
+            lb=-100;
+            ub=100;
+            dim=D;
+            
+        %CEC2017 - 14
+        case 'CF14'
+            fobj = @F14;
+            lb=-100;
+            ub=100;
+            dim=D;
+            
+        %CEC2017 - 15
+        case 'CF15'
+            fobj = @F15;
+            lb=-100;
+            ub=100;
+            dim=D;
+            
+        %CEC2017 - 16
+        case 'CF16'
+            fobj = @F16;
+            lb=-100;
+            ub=100;
+            dim=D;
+            
+        %CEC2017 - 17
+        case 'CF17'
+            fobj = @F17;
+            lb=-100;
+            ub=100;
+            dim=D;
+            
+        %CEC2017 - 18
+        case 'CF18'
+            fobj = @F18;
+            lb=-100;
+            ub=100;
+            dim=D;
+            
+        %CEC2017 - 19
+        case 'CF19'
+            fobj = @F19;
+            lb=-100;
+            ub=100;
+            dim=D;
+            
+        %CEC2017 - 20
+        case 'CF20'
+            fobj = @F20;
+            lb=-100;
+            ub=100;
+            dim=D;
+            
+        %CEC2017 - 21
+        case 'CF21'
+            fobj = @F21;
+            lb=-100;
+            ub=100;
+            dim=D;
+            
+        %CEC2017 - 22
+        case 'CF22'
+            fobj = @F22;
+            lb=-100;
+            ub=100;
+            dim=D;
+            
+        %CEC2017 - 23
+        case 'CF23'
+            fobj = @F23;
+            lb=-100;
+            ub=100;
+            dim=D;
+            
+        %CEC2017 - 24
+        case 'CF24'
+            fobj = @F24;
+            lb=-100;
+            ub=100;
+            dim=D;
+            
+        %CEC2017 - 25
+        case 'CF25'
+            fobj = @F25;
+            lb=-100;
+            ub=100;
+            dim=D;
+            
+        %CEC2017 - 26
+        case 'CF26'
+            fobj = @F26;
+            lb=-100;
+            ub=100;
+            dim=D;
+            
+        %CEC2017 - 27
+        case 'CF27'
+            fobj = @F27;
+            lb=-100;
+            ub=100;
+            dim=D;
+            
+        %CEC2017 - 28
+        case 'CF28'
+            fobj = @F28;
+            lb=-100;
+            ub=100;
+            dim=D;
+            
+        %CEC2017 - 29
+        case 'CF29'
+            fobj = @F29;
+            lb=-100;
+            ub=100;
+            dim=D;
+            
+        %CEC2017 - 30
+        case 'CF30'
+            fobj = @F30;
+            lb=-100;
+            ub=100;
+            dim=D;            
     end
 end
 % F1
@@ -281,3 +490,158 @@ end
 function o=Ufun(x,a,k,m)
 o=k.*((x-a).^m).*(x>a)+k.*((-x-a).^m).*(x<(-a));
 end
+
+% F1
+function o = F1(x) 
+    o = cec17_func(x',1);
+end
+
+% F2
+function o = F2(x) 
+    o = cec17_func(x',2);
+end
+
+% F3
+function o = F3(x) 
+    o = cec17_func(x',3);
+end
+
+% F4
+function o = F4(x) 
+    o = cec17_func(x',4);
+end
+
+% F5
+function o = F5(x) 
+    o = cec17_func(x',5);
+end
+
+% F6
+function o = F6(x) 
+    o = cec17_func(x',6);
+end
+
+% F7
+function o = F7(x) 
+    o = cec17_func(x',7);
+end
+
+% F8
+function o = F8(x) 
+    o = cec17_func(x',8);
+end
+
+% F9
+function o = F9(x) 
+    o = cec17_func(x',9);
+end
+
+% F10
+function o = F10(x) 
+    o = cec17_func(x',10);
+end
+
+
+% F11
+function o = F11(x) 
+    o = cec17_func(x',11);
+end
+
+% F12
+function o = F12(x) 
+    o = cec17_func(x',12);
+end
+
+
+% F13
+function o = F13(x) 
+    o = cec17_func(x',13);
+end
+
+% F14
+function o = F14(x) 
+    o = cec17_func(x',14);
+end
+
+% F15
+function o = F15(x) 
+    o = cec17_func(x',15);
+end
+
+% F16
+function o = F16(x) 
+    o = cec17_func(x',16);
+end
+
+
+% F17
+function o = F17(x) 
+    o = cec17_func(x',17);
+end
+
+% F18
+function o = F18(x) 
+    o = cec17_func(x',18);
+end
+
+% F19
+function o = F19(x) 
+    o = cec17_func(x',19);
+end
+
+% F20
+function o = F20(x) 
+    o = cec17_func(x',20);
+end
+
+% F21
+function o = F21(x) 
+    o = cec17_func(x',21);
+end
+
+% F22
+function o = F22(x) 
+    o = cec17_func(x',22);
+end
+
+% F23
+function o = F23(x) 
+    o = cec17_func(x',23);
+end
+
+% F24
+function o = F24(x) 
+    o = cec17_func(x',24);
+end
+
+
+% F25
+function o = F25(x) 
+    o = cec17_func(x',25);
+end
+
+% F26
+function o = F26(x) 
+    o = cec17_func(x',26);
+end
+
+% F27
+function o = F27(x) 
+    o = cec17_func(x',27);
+end
+
+% F28
+function o = F28(x) 
+    o = cec17_func(x',28);
+end
+
+% F29
+function o = F29(x) 
+    o = cec17_func(x',29);
+end
+
+% F30
+function o = F30(x) 
+    o = cec17_func(x',30);
+end
+
