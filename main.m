@@ -3,21 +3,21 @@ clear
 close all
 
 %% Inputs 
-D = 30;               % Number of decision/design variables
-N = 30;               % Population size
-Max = 1000;           % Maximum number of iterations
-FunctionName = 'F1';  % Function number: F1~F30 except for F2
-NumRuns = 30;         % Number of runs for averaging
+D = 30;               
+N = 30;               
+Max = 1000;           
+FunctionName = 'F1';  
+NumRuns = 30;         
 
 %% Get function details
 [lb, ub, dim, fun] = GetFunctionsdetails(FunctionName, D);
 
-% Ensure lb and ub are vectors of length D
+
 if isscalar(lb)
-    lb = lb * ones(1, D);  % Convert scalar lb to a vector of length D
+    lb = lb * ones(1, D);  
 end
 if isscalar(ub)
-    ub = ub * ones(1, D);  % Convert scalar ub to a vector of length D
+    ub = ub * ones(1, D);  
 end
 
 %% Arrays to store results from each run
