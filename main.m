@@ -6,19 +6,20 @@ close all
 D = 30;               
 N = 30;               
 Max = 1000;           
-FunctionName = 'F1';  
+FunctionName = 'F15';  
 NumRuns = 30;         
 
 %% Get function details
 [lb, ub, dim, fun] = GetFunctionsdetails(FunctionName, D);
 
 
-if isscalar(lb)
-    lb = lb * ones(1, D);  
-end
-if isscalar(ub)
-    ub = ub * ones(1, D);  
-end
+%% if isscalar(lb)
+%    lb = lb * ones(1, D);  
+%end
+%if isscalar(ub)
+%    ub = ub * ones(1, D);  
+%end 
+%
 
 %% Arrays to store results from each run
 BestFitnessArray = zeros(1, NumRuns);
