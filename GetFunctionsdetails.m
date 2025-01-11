@@ -1,81 +1,81 @@
-function [lb,ub,dim,fobj] = GetFunctionsdetails(F,n1)
+function [lb,ub,dim,fobj] = GetFunctionsdetails(F,D)
     switch F
         case 'BF1'
             fobj = @BF1;
             lb=-100;
             ub=100;
-            dim=n1;
+            dim=D;
             
         case 'BF2'
             fobj = @BF2;
             lb=-10;
             ub=10;
-            dim=n1;
+            dim=D;
             
         case 'BF3'
             fobj = @BF3;
             lb=-100;
             ub=100;
-            dim=n1;
+            dim=D;
             
         case 'BF4'
             fobj = @BF4;
             lb=-100;
             ub=100;
-            dim=n1;
+            dim=D;
             
         case 'BF5'
             fobj = @BF5;
             lb=-30;
             ub=30;
-            dim=n1;
+            dim=D;
             
         case 'BF6'
             fobj = @BF6;
             lb=-100;
             ub=100;
-            dim=n1;
+            dim=D;
             
         case 'BF7'
             fobj = @BF7;
             lb=-1.28;
             ub=1.28;
-            dim=n1;
+            dim=D;
             
         case 'BF8'
             fobj = @BF8;
             lb=-500;
             ub=500;
-            dim=n1;
+            dim=D;
             
         case 'BF9'
             fobj = @BF9;
             lb=-5.12;
             ub=5.12;
-            dim=n1;
+            dim=D;
             
         case 'BF10'
             fobj = @BF10;
             lb=-32;
             ub=32;
-            dim=n1;
+            dim=D;
         case 'BF11'
             fobj = @BF11;
             lb=-600;
             ub=600;
-            dim=n1;
+            dim=D;
             
         case 'BF12'
             fobj = @BF12;
             lb=-50;
             ub=50;
-            dim=n1;
+            dim=D;
             
         case 'BF13'
             fobj = @BF13;
             lb=-50;
             ub=50;
-            dim=n1;
+            dim=D;
 
         case 'BF14'
             fobj = @BF14;

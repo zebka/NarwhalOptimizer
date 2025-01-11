@@ -6,7 +6,7 @@ close all
 D = 30;               
 N = 30;               
 Max = 1000;           
-FunctionName = 'F18';  
+FunctionName = 'CF18';  
 NumRuns = 30;         
 
 %% Get function details
