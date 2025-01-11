@@ -6,7 +6,7 @@ close all
 D = 30;               
 N = 30;               
 Max = 1000;           
-FunctionName = 'CF18';  
+FunctionName = 'BF1';  
 NumRuns = 30;         
 
 %% Get function details
@@ -22,7 +22,7 @@ for run = 1:NumRuns
     tic;
     [Bestfitness, Bestposition, Convergencecurve] = NarwhalOptimizer(N, Max, lb, ub, dim, fun);
     RunTimeArray(run) = toc;
-    BestFitnessArray(run) = Bestfitness(1); 
+    BestFitnessArray(run) = Bestposition(); 
     ConvergenceCurves(run, :) = Convergencecurve;
 end
 
