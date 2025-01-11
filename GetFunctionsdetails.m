@@ -1,4 +1,4 @@
-function [lb,ub,dim,fobj] = Get_Functions_details(F,n1)
+function [lb,ub,dim,fobj] = GetFunctionsdetails(F,n1)
 switch F
     case 'F1'
         fobj = @F1;
