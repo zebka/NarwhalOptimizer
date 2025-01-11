@@ -1,14 +1,14 @@
 function [best_solution, best_fitness, CNVG] = NarwhalOptimizer(N, T, lb, ub, dim, fobj)
     % Initialize population
-    X = lb + (ub - lb) * rand(N, dim);  
+    X = rand(N,dim).*(ub-lb)+lb;  
     fitness = zeros(N, 1);              
     
     for i = 1:N
         fitness(i) = fobj(X(i, :));
     end
     
-    sigma0 = 2
-    alpha = 2
+    sigma0 = 2;
+    alpha = 2;
 
     [best_fitness, best_idx] = min(fitness);
     best_solution = X(best_idx, :);
