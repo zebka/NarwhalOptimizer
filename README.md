@@ -13,6 +13,13 @@ To use the Narwhal Optimizer in your own optimization problems, you can clone th
 ```bash
 run main.m
 ```
+Also You can change FunctionName variable for Testing Basic Functions and CEC2017 Benchmark Test Functions.
+for test Use this method :
+
+```bash
+CEC2017 , F8 : 
+FunctionName = 'CF8';
+```
 
 ## Citation
 
