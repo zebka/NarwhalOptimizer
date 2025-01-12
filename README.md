@@ -18,7 +18,7 @@ for test Use this method :
 
 ```bash
 Example : 
-for tesing CEC2017-F8 use:
+for tesing CEC2017-F8 :
 FunctionName = 'CF8';
 And for testing Basic Function like Sphere Function :
 FunctionName = 'BF1';
