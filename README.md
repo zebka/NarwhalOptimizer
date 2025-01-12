@@ -17,7 +17,7 @@ Also You can change FunctionName variable for Testing Basic Functions and CEC201
 for test Use this method :
 
 ```bash
-CEC2017 , F8 : 
+Example : for tesing CEC2017-F8 : 
 FunctionName = 'CF8';
 ```
 
