@@ -23,7 +23,7 @@ FunctionName = 'CF8';
 And for testing Basic Function like Sphere Function :
 FunctionName = 'BF1';
 ```
-After run the optimization algorithm you will see 2 figure. fist figure show the optimization graph and second will show you the function graph.
+After runing the optimization algorithm you will see 2 figure. fist figure show the optimization graph and second will show you the function graph.
 
 ## Citation
 
