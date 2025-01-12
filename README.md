@@ -25,6 +25,8 @@ FunctionName = 'BF1';
 ```
 After runing the optimization algorithm you will see 2 figure. fist figure show the optimization graph and second will show you the function graph.
 
+![alt text](<../Sphere Function.svg>)
+
 ## Citation
 
 If you use this implementation in your research, please cite the original paper:
