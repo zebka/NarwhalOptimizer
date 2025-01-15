@@ -6,7 +6,7 @@ close all
 D = 30;               
 N = 30;               
 Max = 1000;           
-FunctionName = 'BF1';  % Choose between BF... as Basic Functions {1-23} and CF... as CEC2017 Functions
+FunctionName = 'BF10';  % Choose between BF... as Basic Functions {1-23} and CF... as CEC2017 Functions
 NumRuns = 30;         
 
 %% Get function details
@@ -38,16 +38,16 @@ AverageBestFitness = mean(BestFitnessArray);
 AverageRunTime = mean(RunTimeArray);
 AverageConvergenceCurve = mean(ConvergenceCurves, 1);
 
-%% Plot average convergence curve
-figure
-semilogy(1:Max, AverageConvergenceCurve, 'color', 'r', 'linewidth', 2.5);
-title('Average Convergence Curve');
-xlabel('Iteration');
-ylabel('Best score obtained so far');
-
 %% Display the results
 display(['Average running time over 30 runs: ', num2str(AverageRunTime)]);
 display(['Average best fitness over 30 runs: ', num2str(AverageBestFitness)]);
+
+%% Plot average convergence curve
+figure
+semilogy(1:Max, AverageConvergenceCurve, 'color', 'r', 'linewidth', 2.5);
+title(['Average Convergence Curve: (average best fitness : ', num2str(AverageBestFitness),' )']);
+xlabel('Iteration');
+ylabel('Best score obtained so far');
 
 %% Plot the 3D surface of the objective function (for the first two dimensions)
 if dim >= 2 && numel(lb) >= 2 && numel(ub) >= 2
