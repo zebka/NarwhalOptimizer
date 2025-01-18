@@ -131,7 +131,7 @@ function [lb,ub,dim,fobj] = GetFunctionsdetails(F,D)
             ub=10;
             dim=4;    
             
-        case 'F23'
+        case 'BF23'
             fobj = @BF23;
             lb=0;
             ub=10;
