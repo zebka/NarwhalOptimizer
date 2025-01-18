@@ -6,7 +6,7 @@ close all
 D = 30;               
 N = 30;               
 Max = 1000;           
-FunctionName = 'BF10';  % Choose between BF... as Basic Functions {1-23} and CF... as CEC2017 Functions
+FunctionName = 'BF1';  % Choose between BF... as Basic Functions {1-23} and CF... as CEC2017 Functions
 NumRuns = 30;         
 
 %% Get function details
