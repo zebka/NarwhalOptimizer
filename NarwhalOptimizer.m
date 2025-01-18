@@ -7,7 +7,7 @@ function [best_solution, best_fitness, CNVG] = NarwhalOptimizer(N, T, lb, ub, di
         fitness(i) = fobj(X(i, :));
     end
     
-    sigma0 = 2;
+    sigma0 =2;
     alpha = 2;
 
     [best_fitness, best_idx] = min(fitness);
@@ -15,8 +15,11 @@ function [best_solution, best_fitness, CNVG] = NarwhalOptimizer(N, T, lb, ub, di
     
     CNVG = zeros(T, 1);
     CNVG(1) = best_fitness;
+    %lambda = log(3) / T;  
     
     for t = 1:T
+        %sigma = sigma0 * exp(-lambda * t);
+        %alpha = alpha * exp(-lambda * t);
         sigma = sigma0 * (1 - (t / T));
         
         for i = 1:N
