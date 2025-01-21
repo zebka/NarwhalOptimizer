@@ -1,23 +1,16 @@
 clc
 clear
-close all
-
-%% Inputs 
+close all 
 D = 30;               
 N = 30;               
 Max = 1000;           
 FunctionName = 'BF1';  % Choose between BF... as Basic Functions {1-23} and CF... as CEC2017 Functions
 NumRuns = 30;         
-
-%% Get function details
 [lb, ub, dim, fun] = GetFunctionsdetails(FunctionName, D);
-
-%% Arrays to store results from each run
 BestFitnessArray = zeros(1, NumRuns);
 RunTimeArray = zeros(1, NumRuns);
 ConvergenceCurves = zeros(NumRuns, Max);
 
-%% Run Love Evolution Algorithm multiple times
 for run = 1:NumRuns
     tic;
     [Bestfitness, Bestposition, Convergencecurve] = NarwhalOptimizer(N, Max, lb, ub, dim, fun);
@@ -33,23 +26,19 @@ if isscalar(ub)
     ub = ub * ones(1, D);  
 end 
 
-%% Calculate averages
 AverageBestFitness = mean(BestFitnessArray);
 AverageRunTime = mean(RunTimeArray);
 AverageConvergenceCurve = mean(ConvergenceCurves, 1);
 
-%% Display the results
 display(['Average running time over 30 runs: ', num2str(AverageRunTime)]);
 display(['Average best fitness over 30 runs: ', num2str(AverageBestFitness)]);
 
-%% Plot average convergence curve
 figure
 semilogy(1:Max, AverageConvergenceCurve, 'color', 'r', 'linewidth', 2.5);
 title(['Average Convergence Curve: (average best fitness : ', num2str(AverageBestFitness),' )']);
 xlabel('Iteration');
 ylabel('Best score obtained so far');
 
-%% Plot the 3D surface of the objective function (for the first two dimensions)
 if dim >= 2 && numel(lb) >= 2 && numel(ub) >= 2
     figure
     x1 = linspace(lb(1), ub(1), 100);
