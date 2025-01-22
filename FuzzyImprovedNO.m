@@ -7,7 +7,7 @@ function [best_solution, best_fitness, CNVG] = NarwhalOptimizer(N, T, lb, ub, di
         fitness(i) = fobj(X(i, :));
     end
     
-    sigma0 =2;
+    sigma0 =1;
     alpha = 2;
 
     [best_fitness, best_idx] = min(fitness);
