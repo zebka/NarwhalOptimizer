@@ -1,4 +1,4 @@
-function [best_solution, best_fitness, CNVG] = NarwhalOptimizer(N, T, lb, ub, dim, fobj)
+function [best_solution, best_fitness, CNVG] = FuzzyImprovedNO(N, T, lb, ub, dim, fobj)
     % Initialize population
     X = rand(N,dim).*(ub-lb)+lb;  
     fitness = zeros(N, 1);              
