@@ -1,4 +1,5 @@
-# Narwhal Optimizer (NO) - A Novel Nature-Inspired Metaheuristic Algorithm
+# Narwhal Optimizer (NO) and FuzzyImproved Narwhal Optimizer (FINO) 
+
 
 ## Overview
 
@@ -51,7 +52,7 @@ For any questions or inquiries, please contact:
 
 - **Seyyid Ahmed Medjahed**: seyyidahmed.medjahed@univ-relizane.dz  
 - **Fatima Boukhatem**: fatima.boukhatem@univ-sba.dz
-- **Alireza Falahat**: a.falahat@outlook.com (implementation)
+- **Alireza Falahat**: a.falahat@outlook.com (FINO Desigher)
 
 ---
 
