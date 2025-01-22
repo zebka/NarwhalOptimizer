@@ -1,4 +1,4 @@
-# Narwhal Optimizer (NO) and FuzzyImproved Narwhal Optimizer (FINO) 
+# Narwhal Optimizer (NO) and Fuzzy Improved Narwhal Optimizer (FINO) 
 
 
 ## Overview
@@ -26,7 +26,7 @@ FunctionName = 'BF1';
 ```
 After runing the optimization algorithm you will see 2 figure. fist figure show the optimization graph and second will show you the function graph.
 
-![alt text](<https://github.com/zebka/NarwhalOptimizer/blob/main/Examples/BF1-Results.svg>)
+![alt text](<https://github.com/zebka/NarwhalOptimizer/blob/main/FINO-NO-SameGraph/F1.png>)
 
 
 
