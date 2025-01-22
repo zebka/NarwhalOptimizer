@@ -1,0 +1,41 @@
+[System]
+Name='FuzzyFis'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=3
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='Diversity'
+Range=[0 1]
+NumMFs=3
+MF1='Small':'trimf',[0 0 0.4]
+MF2='Med':'trimf',[0.2 0.5 0.8]
+MF3='Large':'trimf',[0.6 1 1]
+
+[Input2]
+Name='Fitness_Improvement'
+Range=[0 1]
+NumMFs=3
+MF1='Poor':'trimf',[0 0 0.4]
+MF2='Moderate':'trimf',[0.2 0.5 0.8]
+MF3='Strong':'trimf',[0.6 1 1]
+
+[Output1]
+Name='alpha'
+Range=[0 100]
+NumMFs=3
+MF1='small':'trimf',[0 0 40]
+MF2='mde':'trimf',[10 50 90]
+MF3='large':'trimf',[60 100 100]
+
+[Rules]
+3 3, 3 (1) : 1
+2 2, 2 (1) : 1
+1 1, 1 (1) : 1
