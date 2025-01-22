@@ -4,13 +4,23 @@ close all
 D = 30;               
 N = 30;               
 Max = 1000;           
-FunctionName = 'BF1';  % Choose between BF... as Basic Functions {1-23} and CF... as CEC2017 Functions
+FunctionName = 'CF5';  % Choose between BF... as Basic Functions {1-23} and CF... as CEC2017 Functions
 NumRuns = 30;         
 [lb, ub, dim, fun] = GetFunctionsdetails(FunctionName, D);
+FBestFitnessArray = zeros(1, NumRuns);
+FRunTimeArray = zeros(1, NumRuns);
+FConvergenceCurves = zeros(NumRuns, Max);
 BestFitnessArray = zeros(1, NumRuns);
 RunTimeArray = zeros(1, NumRuns);
 ConvergenceCurves = zeros(NumRuns, Max);
 
+for run = 1:NumRuns
+    tic;
+    [Bestfitness, Bestposition, Convergencecurve] = FuzzyImprovedNO(N, Max, lb, ub, dim, fun);
+    FRunTimeArray(run) = toc;
+    FBestFitnessArray(run) = Bestposition(); 
+    FConvergenceCurves(run, :) = Convergencecurve;
+end
 for run = 1:NumRuns
     tic;
     [Bestfitness, Bestposition, Convergencecurve] = NarwhalOptimizer(N, Max, lb, ub, dim, fun);
@@ -19,6 +29,7 @@ for run = 1:NumRuns
     ConvergenceCurves(run, :) = Convergencecurve;
 end
 
+
 if isscalar(lb)
     lb = lb * ones(1, D);  
 end
@@ -26,19 +37,31 @@ if isscalar(ub)
     ub = ub * ones(1, D);  
 end 
 
+FAverageBestFitness = mean(FBestFitnessArray);
+FAverageRunTime = mean(FRunTimeArray);
+FAverageConvergenceCurve = mean(FConvergenceCurves, 1);
+
 AverageBestFitness = mean(BestFitnessArray);
 AverageRunTime = mean(RunTimeArray);
 AverageConvergenceCurve = mean(ConvergenceCurves, 1);
 
-display(['Average running time over 30 runs: ', num2str(AverageRunTime)]);
-display(['Average best fitness over 30 runs: ', num2str(AverageBestFitness)]);
+display('------------------------Results--------------------------');
+display(['Average running time over 30 runs for Fuzzy NO: ', num2str(FAverageRunTime)]);
+display(['Average best fitness over 30 runs for Fuzzy NO: ', num2str(FAverageBestFitness)]);
+display('---------------------------------------------------------');
+display(['Average running time over 30 runs for main NO: ', num2str(AverageRunTime)]);
+display(['Average best fitness over 30 runs for main NO: ', num2str(AverageBestFitness)]);
+
 
 figure
-semilogy(1:Max, AverageConvergenceCurve, 'color', 'r', 'linewidth', 2.5);
-title(['Average Convergence Curve: (average best fitness : ', num2str(AverageBestFitness),' )']);
+semilogy(1:Max, FAverageConvergenceCurve, 'color', 'r', 'linewidth', 2.5);
+hold on;
+semilogy(1:Max, AverageConvergenceCurve, 'color', 'b', 'linewidth', 2.5);
+legend('FuzzyImprovedNO','NO');
+title('Average Convergence Curve');
 xlabel('Iteration');
-ylabel('Best score obtained so far');
-
+ylabel('Best score');
+%{
 if dim >= 2 && numel(lb) >= 2 && numel(ub) >= 2
     figure
     x1 = linspace(lb(1), ub(1), 100);
@@ -64,3 +87,4 @@ if dim >= 2 && numel(lb) >= 2 && numel(ub) >= 2
 else
     warning('Cannot plot 3D surface: The problem dimension or bounds are insufficient.');
 end
+%}
