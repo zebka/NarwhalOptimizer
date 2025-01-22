@@ -4,7 +4,7 @@ close all
 D = 30;               
 N = 30;               
 Max = 1000;           
-FunctionName = 'CF5';  % Choose between BF... as Basic Functions {1-23} and CF... as CEC2017 Functions
+FunctionName = 'BF14';  % Choose between BF... as Basic Functions {1-23} and CF... as CEC2017 Functions
 NumRuns = 30;         
 [lb, ub, dim, fun] = GetFunctionsdetails(FunctionName, D);
 FBestFitnessArray = zeros(1, NumRuns);
@@ -61,6 +61,7 @@ legend('FuzzyImprovedNO','NO');
 title('Average Convergence Curve');
 xlabel('Iteration');
 ylabel('Best score');
+
 %{
 if dim >= 2 && numel(lb) >= 2 && numel(ub) >= 2
     figure
