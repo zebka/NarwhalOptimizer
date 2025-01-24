@@ -1,12 +1,12 @@
 clc
 clear
 close all 
-addpath('Benchmarks');
+addpath('Benchmarks')
 %%
 D = 30;               
 N = 30;               
 Max = 1000;           
-FunctionName = 'BF1';  % Choose between BF... as Basic Functions {1-23} and CF... as CEC2017 Functions
+FunctionName = 'CF29';  % Choose between BF... as Basic Functions {1-23} and CF... as CEC2017 Functions
 NumRuns = 5;         
 [lb, ub, dim, fun] = GetFunctionsdetails(FunctionName, D);
 

@@ -1,4 +1,6 @@
 function [lb,ub,dim,fobj] = GetFunctionsdetails(F,D)
+    addpath('CEC2017');
+    addpath('CEC2022');
     switch F
         case 'BF1'
             fobj = @BF1;
@@ -344,7 +346,7 @@ function [lb,ub,dim,fobj] = GetFunctionsdetails(F,D)
             fobj = @F30;
             lb=-100;
             ub=100;
-            dim=D;            
+            dim=D;          
     end
 end
 % F1
@@ -490,6 +492,8 @@ end
 function o=Ufun(x,a,k,m)
 o=k.*((x-a).^m).*(x>a)+k.*((-x-a).^m).*(x<(-a));
 end
+
+
 % F1
 function o = F1(x) 
     o = cec17_func(x',1);
@@ -643,4 +647,6 @@ end
 function o = F30(x) 
     o = cec17_func(x',30);
 end
+
+
 
