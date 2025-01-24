@@ -1,13 +1,12 @@
-clc
-clear
-close all 
-addpath('Benchmarks')
+clear; 
+clc; 
+close all;
 %%
 D = 30;               
 N = 30;               
 Max = 1000;           
-FunctionName = 'CF29';  % Choose between BF... as Basic Functions {1-23} and CF... as CEC2017 Functions
-NumRuns = 5;         
+FunctionName = 'CF1';  % Choose between BF... as Basic Functions {1-23} and CF... as CEC2017 Functions
+NumRuns = 2;         
 [lb, ub, dim, fun] = GetFunctionsdetails(FunctionName, D);
 
 FBestFitnessArray = zeros(1, NumRuns);

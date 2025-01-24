@@ -1,6 +1,4 @@
 function [lb,ub,dim,fobj] = GetFunctionsdetails(F,D)
-    addpath('CEC2017');
-    addpath('CEC2022');
     switch F
         case 'BF1'
             fobj = @BF1;
