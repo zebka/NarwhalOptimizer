@@ -4,8 +4,8 @@ close all
 D = 30;               
 N = 30;               
 Max = 1000;           
-FunctionName = 'BF22';  % Choose between BF... as Basic Functions {1-23} and CF... as CEC2017 Functions
-NumRuns = 30;         
+FunctionName = 'CF27';  % Choose between BF... as Basic Functions {1-23} and CF... as CEC2017 Functions
+NumRuns = 5;         
 [lb, ub, dim, fun] = GetFunctionsdetails(FunctionName, D);
 FBestFitnessArray = zeros(1, NumRuns);
 FRunTimeArray = zeros(1, NumRuns);
